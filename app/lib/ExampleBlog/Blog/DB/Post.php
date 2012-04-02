@@ -2,6 +2,12 @@
 namespace Blog\DB;
 use Database\Model\Table;
 
+/**
+ * Post model
+ * 
+ * @author SplitIce
+ *
+ */
 class Post extends Table {
 	const TABLE_PREFIX = 'post_';
 	const TABLE = 'post';
