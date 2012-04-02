@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 Radical Blog README
+=======
+Radical PHP - The most RAD Framework
+
+Currently pre-alpha, not recomended for public use unless you know what you are doing :)
+
+Inspired by lithium, kohana and django. Currently looking for team members.
+
+New Layout branch, this is alot more like a real framework
+>>>>>>> f45ccc3e602e3b17ad78b9c38e44cde60dec1756
