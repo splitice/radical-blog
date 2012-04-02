@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 Test
+=======
+Radical PHP - The most RAD Framework
+
+Currently pre-alpha, not recomended for public use unless you know what you are doing :)
+
+Inspired by lithium, kohana and django. Currently looking for team members.
+
+New Layout branch...
+>>>>>>> d99decc54ba2a8f69d0e6584a96d5eaf0333513b
