@@ -5,4 +5,15 @@ foreach ($_->vars['list'] as $post){
 	
 	echo '<p>',$post->getBody(),'</p>';
 }
+
+echo '<div class="pagination">';
+$url = function($page){
+	if($page == 1){
+		return '/';
+	}else{
+		return '/page/'.$i;
+	}
+};
+echo $_->vars['list']->OutputLinks(new Net\URL\Pagination\CallbackMethod($url),new Net\URL\Pagination\Template\Standard());
+echo '</div>';
 ?>
