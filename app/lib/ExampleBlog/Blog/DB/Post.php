@@ -23,4 +23,11 @@ class Post extends Table {
 	 * @var DateTime
 	 */
 	protected $date;
+	
+	/**
+	 * The URL Stub used to access a post.
+	 * 
+	 * @var Stub
+	 */
+	protected $stub;
 }
