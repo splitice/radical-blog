@@ -3,7 +3,7 @@
 foreach ($_->vars['list'] as $post){
 	echo '<h2>',$post->getTitle(),'</h2>';
 	
-	echo '<p>',$post->getBody(),'</p>';
+	echo '<p>',$post->getContent(),'</p>';
 }
 
 echo '<div class="pagination">';

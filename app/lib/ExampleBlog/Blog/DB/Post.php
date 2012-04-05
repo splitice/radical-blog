@@ -14,7 +14,7 @@ class Post extends Table {
 	
 	protected $id;
 	protected $title;
-	protected $body;
+	protected $content;
 	
 	/**
 	 * Date field, althout the DynamicType class would be applied
