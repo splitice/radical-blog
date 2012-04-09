@@ -11,7 +11,7 @@ $url = function($page){
 	if($page == 1){
 		return '/';
 	}else{
-		return '/page/'.$i;
+		return '/page/'.$page;
 	}
 };
 echo $_->vars['list']->OutputLinks(new Net\URL\Pagination\CallbackMethod($url),new Net\URL\Pagination\Template\Standard());
