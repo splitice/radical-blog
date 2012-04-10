@@ -1,5 +1,7 @@
 <?php
 namespace Blog\DB;
+use Basic\String\Truncate;
+
 use Database\Model\Table;
 
 /**
@@ -30,4 +32,13 @@ class Post extends Table {
 	 * @var Stub
 	 */
 	protected $stub;
+	
+	function getContentShort(){
+		$pos = strpos($this->content,'<!-- more -->');
+		if($pos === false){
+			return Truncate::Trim($this->content, 300, true);
+		}
+
+		return substr($this->content,0,$pos);
+	}
 }

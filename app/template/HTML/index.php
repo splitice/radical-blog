@@ -4,9 +4,9 @@ if(!isset($_)) { $_ = new \Exception('Template Error'); throw $_; } //Dewarn
 <h1>Example Blog</h1>
 <?php 
 foreach ($_->vars['list'] as $post){
-	echo '<h2>','<a href="',$_->U($post),'">',$post->getTitle(),'</a>','</h2>';
+	echo '<h2>','<a href="',$_->U($post),'">',$_->H($post->getTitle()),'</a>','</h2>';
 	
-	echo '<p>',$post->getContent(),'</p>';
+	echo '<p>',$post->getContentShort(),'</p>';
 }
 
 echo '<div class="pagination">';
