@@ -20,9 +20,8 @@ class Post extends PageHandler\HTMLPageBase {
 			return new Special\FileNotFound();
 		}
 		
-		$table = TableReference::getByTableClass('Post');
 		$VARS = array();
-		$VARS['list'] = new \Database\Model\Pagination\Paginator($table);
-		return new Template('index',$VARS);
+		$VARS['post'] = $this->post;
+		return new Template('post',$VARS);
 	}
 }
