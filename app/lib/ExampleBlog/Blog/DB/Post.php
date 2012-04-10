@@ -33,6 +33,12 @@ class Post extends Table {
 	 */
 	protected $stub;
 	
+	/**
+	 * Get a Truncated version of the Content.
+	 * Truncation occurs at <!-- more --> if its found, otherwise at 300 characters
+	 * 
+	 * @return string
+	 */
 	function getContentShort(){
 		$pos = strpos($this->content,'<!-- more -->');
 		if($pos === false){
