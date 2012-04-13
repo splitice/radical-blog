@@ -21,7 +21,7 @@ foreach ( $_->vars ['list'] as $post ) {
 	echo '</div>';
 }
 
-echo '<div class="pagination">';
+echo '<div id="postnavi_index" class="pagination">';
 $url = function ($page) {
 	if ($page == 1) {
 		return '/';
@@ -30,13 +30,5 @@ $url = function ($page) {
 	}
 };
 echo $_->vars ['list']->OutputLinks ( new Net\URL\Pagination\CallbackMethod ( $url ), new Net\URL\Pagination\Template\Standard () );
-echo '</div>';
+echo '</div><div class="clear></div>';
 ?>
-<br />
-<div id="postnavi_index">
-	<div class="left">
-		<a href="http://themes.koch-werkstatt.de/page/2/">&laquo; Previous</a>
-	</div>
-	<div class="right"></div>
-</div>
-<div class="clear"></div>
