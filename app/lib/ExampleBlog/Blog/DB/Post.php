@@ -47,4 +47,12 @@ class Post extends Table {
 
 		return substr($this->content,0,$pos);
 	}
+	
+	function toURL(){
+		return '/p/'.$this->stub;
+	}
+	
+	static function fromStub($stub){
+		return static::fromFields(array('*stub'=>$stub));
+	}
 }

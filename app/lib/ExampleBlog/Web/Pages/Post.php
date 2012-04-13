@@ -1,5 +1,7 @@
 <?php
 namespace Web\Pages;
+use Web\Templates\ContainerTemplate;
+
 use Database\Model\TableReference;
 use Web\Template;
 use Web\PageHandler;
@@ -10,7 +12,7 @@ class Post extends PageHandler\HTMLPageBase {
 	private $page = 1;
 	function __construct($data = array()){
 		if(isset($data['post'])){
-			$this->post = DB\Post::fromStub($this->post);
+			$this->post = DB\Post::fromStub($data['post']);
 		}else{
 			throw new Exception('No Post Stub given to controller');
 		}
@@ -22,6 +24,6 @@ class Post extends PageHandler\HTMLPageBase {
 		
 		$VARS = array();
 		$VARS['post'] = $this->post;
-		return new Template('post',$VARS);
+		return new ContainerTemplate('post',$VARS);
 	}
 }

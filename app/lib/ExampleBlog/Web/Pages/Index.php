@@ -1,5 +1,7 @@
 <?php
 namespace Web\Pages;
+use Web\Templates\ContainerTemplate;
+
 use Database\Model\TableReference;
 use Web\Template;
 use Web\PageHandler;
@@ -15,6 +17,6 @@ class Index extends PageHandler\HTMLPageBase {
 		$table = TableReference::getByTableClass('Post');
 		$VARS = array();
 		$VARS['list'] = new \Database\Model\Pagination\Paginator($table);
-		return new Template('index',$VARS);
+		return new ContainerTemplate('index',$VARS);
 	}
 }
