@@ -16,7 +16,7 @@ foreach ( $_->vars ['list'] as $post ) {
 	//Meta
 	echo '<div class="postmeta">';
 	echo 'Filed under ';
-	echo '<a href="'.$_->u($post->getCategory()).'">'.$post->getCategory().'</a>';
+	echo '<a href="'.$_->u($post->getCategory()).'">'.$_->H ( $post->getCategory()).'</a>';
 	/*echo implode(', ',array_map(function($cat) use ($_){
 		return '<a href="'.$_->u($cat).'">'.$cat.'</a>';
 	},$post->getCategorys()));*/
