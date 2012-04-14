@@ -15,7 +15,12 @@ foreach ( $_->vars ['list'] as $post ) {
 	
 	//Meta
 	echo '<div class="postmeta">';
-	echo 'Filed under <a>Allgemein</a>';
+	echo 'Filed under ';
+	echo '<a href="'.$_->u($post->getCategory()).'">'.$post->getCategory().'</a>';
+	/*echo implode(', ',array_map(function($cat) use ($_){
+		return '<a href="'.$_->u($cat).'">'.$cat.'</a>';
+	},$post->getCategorys()));*/
+	
 	echo ' | ';
 	echo '<a>',$post->getComments()->getCount(),' Comments</a>';
 	echo '</div>';
@@ -30,5 +35,5 @@ $url = function ($page) {
 	}
 };
 echo $_->vars ['list']->OutputLinks ( new Net\URL\Pagination\CallbackMethod ( $url ), new Net\URL\Pagination\Template\Standard () );
-echo '</div><div class="clear></div>';
+echo '</div><div class="clear"></div>';
 ?>
