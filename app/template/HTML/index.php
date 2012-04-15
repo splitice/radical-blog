@@ -16,7 +16,8 @@ foreach ( $_->vars ['list'] as $post ) {
 	
 	//Category
 	echo '<div class="postmeta">';
-	echo 'Filed under ';
+	echo 'Posted ',$post->getDate()->toFormat('F j, Y g:i a');
+	echo ' | Filed under ';
 	echo '<a href="'.$_->u($post->getCategory()).'">'.$_->H ( $post->getCategory()).'</a>';
 	
 	//Tags

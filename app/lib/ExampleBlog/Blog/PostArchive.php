@@ -1,6 +1,10 @@
 <?php
 namespace Blog;
 
+use Database\SQL\Parts\Between;
+
+use Database\SQL\Parts\Where;
+
 use Web\Interfaces\IToURL;
 use Basic\DateTime\Date;
 use Database\Model\TableReference;
@@ -15,7 +19,11 @@ class PostArchive implements IToURL {
 		return $this->date->toFormat('F Y');
 	}
 	function toURL(){
-		return '/date/'.$this->date->getMonth().'/'.$this->date->getYear().'/';
+		return '/archive/'.$this->date->getMonth().'/'.$this->date->getYear().'/';
+	}
+	function Filter(Where $where){
+		$between = new Between($this->date, $this->date->add('1 month'));
+		$where->Add('post_date', $between);
 	}
 	static function getAll(){
 		$postTable = TableReference::getByTableClass('Post');

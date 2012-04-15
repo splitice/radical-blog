@@ -1,7 +1,8 @@
 <?php
 namespace Web\Pages;
-use Database\SQL\SelectStatement;
+use Basic\DateTime\Date;
 
+use Database\SQL\SelectStatement;
 use Database\SQL\Parts\Where;
 use Database\Search\Adapter\MysqlFulltextTable;
 use Web\Templates\ContainerTemplate;
@@ -15,6 +16,8 @@ class Listing extends PageHandler\HTMLPageBase {
 	protected $page = 1;
 	protected $category;
 	protected $tag;
+	protected $archive;
+	
 	function __construct($data = array()){
 		if(isset($data['page'])){
 			$this->page = $data['page'];
@@ -24,6 +27,9 @@ class Listing extends PageHandler\HTMLPageBase {
 		}
 		if(isset($data['category'])){
 			$this->category = DB\Category::fromStub($data['category']);
+		}
+		if(isset($data['month']) && isset($data['year'])){
+			$this->archive = new \Blog\PostArchive(Date::fromRaw($data['year'], $data['month']));
 		}
 		if(isset($_GET['search'])){
 			$this->search = $_GET['search'];
@@ -42,6 +48,9 @@ class Listing extends PageHandler\HTMLPageBase {
 		if($this->category){
 			$where->Add('category_id', $this->category->getId());
 		}
+		if($this->archive){
+			$this->archive->Filter($where);
+		}
 		$sql->where($where);
 		return $sql;
 	}
@@ -57,6 +66,9 @@ class Listing extends PageHandler\HTMLPageBase {
 				$ret .= ' ';
 			}
 			$ret .= 'Search Results for: 2012';
+		}
+		if($this->archive){
+			$ret = 'Archive for '.$this->archive;
 		}
 		if($this->page != 1){
 			if($ret){
