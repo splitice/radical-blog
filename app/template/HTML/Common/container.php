@@ -4,7 +4,7 @@
 <body>
 	<div id="header" class="clearfix">
 		<div id="logo">
-			<h1><a href="http://themes.koch-werkstatt.de">Radical PHP Blog</a></h1>
+			<h1><a href="<?=$_->u('/')?>">Radical PHP Blog</a></h1>
 		</div>
 	</div>
 	<div id="content" class="clearfix">
@@ -19,12 +19,7 @@
 	<div id="footer" class="clearfix">
 		<div class="footer_text">
 
-			<a href="#">Top</a>
-			<div>&nbsp;</div>
-			<a href="http://themes.koch-werkstatt.de">Themes</a> is powered by <a
-				href="http://www.wordpress-deutschland.org">WordPress 3.2.1</a> and
-			Theme <a
-				href="http://koch-werkstatt.de/2010/03/21/wordpress-theme-nameless/">Nameless</a>.
+			<a href="#">Top</a> | <a href="http://koch-werkstatt.de/2010/03/21/wordpress-theme-nameless/">Nameless</a>.
 
 		</div>
 	</div>

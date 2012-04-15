@@ -30,14 +30,11 @@
 	<div class="sidebar_box">
 		<h4>Archive</h4>
 		<ul>
-			<li><a href='http://themes.koch-werkstatt.de/2010/03/'
-				title='März 2010'>März 2010</a></li>
-			<li><a href='http://themes.koch-werkstatt.de/2008/11/'
-				title='November 2008'>November 2008</a></li>
-			<li><a href='http://themes.koch-werkstatt.de/2008/09/'
-				title='September 2008'>September 2008</a></li>
-			<li><a href='http://themes.koch-werkstatt.de/2007/04/'
-				title='April 2007'>April 2007</a></li>
+		<?php 
+		foreach(\Blog\PostArchive::getAll() as $row){
+			echo '<li><a href="',$_->u($row),'">',$row,'</a></li>';
+		}
+		?>
 		</ul>
 	</div>
 

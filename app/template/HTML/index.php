@@ -4,6 +4,8 @@ if (! isset ( $_ )) {
 	throw new \Exception ( 'Template Error' );
 } // Dewarn & ZS Code Completion
 
+echo '<h1>',$_->h($_->vars['header']),'</h1>';
+
 //Main Listing
 foreach ( $_->vars ['list'] as $post ) {
 	echo '<div class="post"><div class="entry">';

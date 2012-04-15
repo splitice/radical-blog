@@ -24,4 +24,8 @@ class Category extends Table {
 	function __toString(){
 		return $this->title;
 	}
+	
+	static function fromStub($stub){
+		return static::fromFields(array('*stub'=>$stub));
+	}
 }
