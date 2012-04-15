@@ -1,5 +1,7 @@
 <?php
 namespace Blog\DB;
+use Blog\CommentForm;
+
 use Basic\Arr;
 
 use Basic\String\Truncate;
@@ -18,7 +20,16 @@ class Post extends Table {
 	
 	protected $id;
 	protected $title;
+	
+	/**
+	 * The post body
+	 */
 	protected $content;
+	
+	/**
+	 * The user who posted the post. aka the poster.
+	 */
+	protected $user;
 	
 	/**
 	 * Date field, althout the DynamicType class would be applied
@@ -60,6 +71,10 @@ class Post extends Table {
 	
 	function toURL(){
 		return '/p/'.$this->stub;
+	}
+	
+	function getCommentFormBuilder(){
+		return new CommentForm($this);
 	}
 	
 	static function fromStub($stub){
