@@ -4,9 +4,7 @@
 <body>
 	<div id="header" class="clearfix">
 		<div id="logo">
-			<a href="http://themes.koch-werkstatt.de"><img
-				src="http://themes.koch-werkstatt.de/wp-content/themes/nameless/images/header.gif"
-				alt="Themes" title="Themes" height="150" /></a>
+			<h1><a href="http://themes.koch-werkstatt.de">Radical PHP Blog</a></h1>
 		</div>
 	</div>
 	<div id="content" class="clearfix">

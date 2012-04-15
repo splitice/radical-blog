@@ -1,5 +1,7 @@
 <?php
 namespace Blog\DB;
+use Basic\Arr;
+
 use Basic\String\Truncate;
 
 use Database\Model\Table;
@@ -48,6 +50,12 @@ class Post extends Table {
 		}
 
 		return substr($this->content,0,$pos);
+	}
+	
+	function getTags(){
+		return Arr::map(function(PostTag $pt){
+			return $pt->getTag();
+		}, $this->getPostTags());
 	}
 	
 	function toURL(){

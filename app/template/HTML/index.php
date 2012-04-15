@@ -3,23 +3,28 @@ if (! isset ( $_ )) {
 	$_ = new \Web\Templates\Scope();
 	throw new \Exception ( 'Template Error' );
 } // Dewarn & ZS Code Completion
-?>
-<h1>Example Blog</h1>
-<?php
+
+//Main Listing
 foreach ( $_->vars ['list'] as $post ) {
 	echo '<div class="post"><div class="entry">';
 	echo '<h2>', '<a href="', $_->U ( $post ), '">', $_->H ( $post->getTitle () ), '</a>', '</h2>';
 	
-	echo '<p>', $post->getContentShort (), '</p>';
+	echo '<p>', $_->H ( $post->getContentShort () ), '</p>';
 	echo '</div><div class="clear"></div></div>';
 	
-	//Meta
+	//Category
 	echo '<div class="postmeta">';
 	echo 'Filed under ';
 	echo '<a href="'.$_->u($post->getCategory()).'">'.$_->H ( $post->getCategory()).'</a>';
-	/*echo implode(', ',array_map(function($cat) use ($_){
-		return '<a href="'.$_->u($cat).'">'.$cat.'</a>';
-	},$post->getCategorys()));*/
+	
+	//Tags
+	$tags = $post->getTags();
+	if($tags){
+		echo ' | Tagged: ';
+		echo implode(', ',array_map(function($tag) use ($_){
+			return '<a href="'.$_->u($tag).'">'.$tag.'</a>';
+		},$post->getTags()));
+	}
 	
 	echo ' | ';
 	echo '<a>',$post->getComments()->getCount(),' Comments</a>';

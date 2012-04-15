@@ -4,21 +4,21 @@ namespace Blog\DB;
 use Database\Model\Table;
 
 /**
- * Category model
+ * Tag model
  * 
  * @author SplitIce
  *
  */
-class Category extends Table {
-	const TABLE_PREFIX = 'category_';
-	const TABLE = 'category';
+class Tag extends Table {
+	const TABLE_PREFIX = 'tag_';
+	const TABLE = 'tag';
 	
 	protected $id;
 	protected $title;
 	protected $stub;
 	
 	function toURL(){
-		return '/category/'.$this->stub;
+		return '/tag/'.$this->stub;
 	}
 	
 	function __toString(){
