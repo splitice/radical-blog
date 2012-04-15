@@ -17,6 +17,12 @@ class Comment extends Table {
 	protected $name;
 	protected $body;
 	protected $email;
-	
+	/**
+	 * Date field, althout the DynamicType class would be applied
+	 * automatically we specify it manually in this example code.
+	 *
+	 * @var DateTime
+	 */
+	protected $date;
 	protected $post;
 }

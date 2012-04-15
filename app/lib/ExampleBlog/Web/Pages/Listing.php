@@ -31,8 +31,8 @@ class Listing extends PageHandler\HTMLPageBase {
 		if(isset($data['month']) && isset($data['year'])){
 			$this->archive = new \Blog\PostArchive(Date::fromRaw($data['year'], $data['month']));
 		}
-		if(isset($_GET['search'])){
-			$this->search = $_GET['search'];
+		if(isset($_GET['s'])){
+			$this->search = $_GET['s'];
 		}
 	}
 	function Title($part = null){
@@ -65,7 +65,7 @@ class Listing extends PageHandler\HTMLPageBase {
 			if($ret){
 				$ret .= ' ';
 			}
-			$ret .= 'Search Results for: 2012';
+			$ret .= 'Search Results for: '.$this->search;
 		}
 		if($this->archive){
 			$ret = 'Archive for '.$this->archive;
