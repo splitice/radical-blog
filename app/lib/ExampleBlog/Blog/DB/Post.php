@@ -73,8 +73,8 @@ class Post extends Table {
 		return '/p/'.$this->stub;
 	}
 	
-	function getCommentFormBuilder(){
-		return new CommentForm($this);
+	function getCommentFormBuilder($event){
+		return new CommentForm($this,$event);
 	}
 	
 	static function fromStub($stub){

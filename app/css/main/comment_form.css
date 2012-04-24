@@ -1,0 +1,21 @@
+.comments label
+{
+	border:none;
+	color:#222;
+	display:block;
+	font-size:95%;
+	font-weight:700;
+	line-height:150%;
+	padding:0 0 1px;
+	width: 20%;
+	float: left;
+}
+.comments textarea, .comments input
+{
+	color:#333;
+	font-size:100%;
+	margin:0;
+	width:70%;
+	float: right;
+	clear: right;
+}

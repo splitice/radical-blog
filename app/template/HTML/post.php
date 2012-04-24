@@ -27,6 +27,6 @@
 	</ol>
 	<h2>Post your Comment</h2>
 	<?
-		echo $_->vars['post']->getCommentFormBuilder();
+		echo $_->vars['comment_form'];
 	?>
 </div>
