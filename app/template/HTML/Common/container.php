@@ -23,5 +23,6 @@
 
 		</div>
 	</div>
+	<? $_->incl('Common/footer','framework'); ?>
 </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
 use Database\Model\TableReference;
 
-new \Web\Session\Handler\UserSession(TableReference::getByTableClass('User'));
+new \Web\Session\Authentication\Source\Database(TableReference::getByTableClass('User'));
+new \Web\Session\Authentication\Http();
