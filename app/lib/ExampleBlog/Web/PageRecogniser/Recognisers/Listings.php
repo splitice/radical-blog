@@ -10,6 +10,6 @@ class Listings extends Templates\Standard {
 		'/tag/%(tag)s'=>'\\Web\\Pages\\Listing',
 		'/tag/%(tag)s/page/%(page)d'=>'\\Web\\Pages\\Listing',
 		'/page/%(page)d'=>'\\Web\\Pages\\Listing',
-		'/' => '\\Web\\Pages\\Listig'
+		'/' => '\\Web\\Pages\\Listing'
 	);
 }
