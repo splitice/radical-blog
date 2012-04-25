@@ -2,19 +2,32 @@ Radical Blog
 
 An example project built on the Radical-PHP framework.
 
-Aim: To build a blogging system in less than 1,000 lines of code.
+Aim: To build a simple yet competant blogging system in less than 1,000 lines of code.
 
 Features:
- - HTML Post support   [ ]
- - Comments            [ ]
- - AntiSpam            [ ]
- - Captcha             [ ]
- - Tags and Categories [*]
- - Dated Archive       [*]
- - Search              [*]
- - Admin panel         [ ]
- - Form validation     [ ]
- - WYSIWYG editor      [ ]
- - Theme               [*]
+ - HTML Post support       [ ]
+ - Comments                [*]
+ - AntiSpam                [ ]
+ - Captcha                 [ ]
+ - Tags and Categories     [*]
+ - Dated Archive           [*]
+ - Search                  [*]
+ - Admin panel             [ ]
+ - Form validation         [ ]
+ - WYSIWYG editor          [ ]
+ - Theme                   [*]
+ - TagBox                  [ ]
+ - Ajax Comment Submission [ ]
+ - Syndication             [ ]
  
  Radical-PHP: https://github.com/splitice/radical-php
+ 
+ Installation
+  = Step 1 =
+  Download Radical-PHP into your working directory
+  
+  = Step 2 =
+  Download Radical-Blog into that same working directory.
+  
+  = Step 3 =
+  Import blog.sql
