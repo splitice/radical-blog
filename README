@@ -19,6 +19,8 @@ Features:
  - TagBox                  [ ]
  - Ajax Comment Submission [ ]
  - Syndication             [ ]
+ - Trackbacks              [ ]
+ - XMLRPC?                 [ ]
  
  Radical-PHP: https://github.com/splitice/radical-php
  
