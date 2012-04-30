@@ -1,10 +1,8 @@
 <?php
 namespace Blog;
 
-use Database\SQL\Parts\Between;
-
+use Database\SQL\Parts\Expression\Between;
 use Database\SQL\Parts\Where;
-
 use Web\Interfaces\IToURL;
 use Basic\DateTime\Date;
 use Database\Model\TableReference;

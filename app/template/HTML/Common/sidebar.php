@@ -37,6 +37,11 @@
 		?>
 		</ul>
 	</div>
+	
+	
+	<?php 
+	echo $_->widget('TagBox');
+	?>
 
 	<div class="sidebar_box">
 		<h4>Meta</h4>
