@@ -34,4 +34,7 @@ class Post extends EventPageBase {
 		$VARS['comment_form'] = $this->post->getCommentFormBuilder(array($this,'eventPostComment'));
 		return new ContainerTemplate('post',$VARS);
 	}
+	function POST(){
+		return $this->GET();
+	}
 }
