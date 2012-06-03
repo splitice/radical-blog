@@ -3,17 +3,17 @@ namespace Web\Page\Router\Recognisers;
 
 class Listings extends Templates\Standard {
 	static $match = array(
-		'/archive/%(month)d/%(year)d'=>'\\Web\\Pages\\Listing',
-		'/archive/%(month)d/%(year)d/page/%(page)d'=>'\\Web\\Pages\\Listing',
-		'/category/%(category)s'=>'\\Web\\Pages\\Listing',
-		'/category/%(category)s/page/%(page)d'=>'\\Web\\Pages\\Listing',
-		'/tag/%(tag)s'=>'\\Web\\Pages\\Listing',
-		'/tag/%(tag)s/page/%(page)d'=>'\\Web\\Pages\\Listing',
-		'/tags/'=>'\\Web\\Pages\\TagList',
-		'/tags/page/%(page)d'=>'\\Web\\Pages\\TagList',
-		'/tags/%(letter)s'=>'\\Web\\Pages\\TagList',
-		'/tags/%(letter)s/page/%(page)d'=>'\\Web\\Pages\\TagList',
-		'/page/%(page)d'=>'\\Web\\Pages\\Listing',
-		'/' => '\\Web\\Pages\\Listing'
+		'/archive/%(month)d/%(year)d'=>'Listing',
+		'/archive/%(month)d/%(year)d/page/%(page)d'=>'Listing',
+		'/category/%(category)s'=>'Listing',
+		'/category/%(category)s/page/%(page)d'=>'Listing',
+		'/tag/%(tag)s'=>'Listing',
+		'/tag/%(tag)s/page/%(page)d'=>'Listing',
+		'/tags/'=>'TagList',
+		'/tags/page/%(page)d'=>'TagList',
+		'/tags/%(letter)s'=>'TagList',
+		'/tags/%(letter)s/page/%(page)d'=>'TagList',
+		'/page/%(page)d'=>'Listing',
+		'/' => 'Listing'
 	);
 }
