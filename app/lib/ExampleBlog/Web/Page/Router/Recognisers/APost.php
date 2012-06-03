@@ -1,5 +1,5 @@
 <?php
-namespace Web\PageRecogniser\Recognisers;
+namespace Web\Page\Router\Recognisers;
 
 class APost extends Templates\Standard {
 	static $match = array(

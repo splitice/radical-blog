@@ -4,7 +4,7 @@ namespace Blog\DB;
 use Blog\CommentForm;
 use Basic\Arr;
 use Basic\String\Truncate;
-use Database\Model\Table;
+use Model\Database\Model\Table;
 
 /**
  * Post model

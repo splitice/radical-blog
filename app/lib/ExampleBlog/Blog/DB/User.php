@@ -2,8 +2,7 @@
 namespace Blog\DB;
 
 use Web\Session\User\IUserAdmin;
-
-use Database\Model\Table;
+use Model\Database\Model\Table;
 
 /**
  * User model

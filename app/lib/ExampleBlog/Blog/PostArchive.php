@@ -1,12 +1,12 @@
 <?php
 namespace Blog;
 
-use Database\SQL\Parts\Expression\Between;
-use Database\SQL\Parts\Where;
-use Web\Interfaces\IToURL;
+use Model\Database\SQL\Parts\Expression\Between;
+use Model\Database\SQL\Parts\Where;
+use Web\IToURL;
 use Basic\DateTime\Date;
-use Database\Model\TableReference;
-use Database\DBAL;
+use Model\Database\Model\TableReference;
+use Model\Database\DBAL;
 
 class PostArchive implements IToURL {
 	protected $date;
