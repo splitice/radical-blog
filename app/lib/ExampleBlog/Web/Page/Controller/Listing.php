@@ -2,7 +2,6 @@
 namespace Web\Page\Controller;
 
 use Model\Database\Model\Pagination\Paginator;
-
 use Web\Page\Handler\HTMLPageBase;
 use Basic\DateTime\Date;
 use Model\Database\SQL\SelectStatement;
@@ -11,7 +10,6 @@ use Model\Database\Search\Adapter\MysqlFulltextTable;
 use Web\Templates\ContainerTemplate;
 use Model\Database\Model\TableReference;
 use Web\Template;
-use Web\PageHandler;
 use Blog\DB;
 
 class Listing extends HTMLPageBase {
