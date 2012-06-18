@@ -42,6 +42,6 @@ $url = function ($page) {
 		return '/page/' . $page;
 	}
 };
-echo $_->vars ['list']->OutputLinks ( new Net\URL\Pagination\CallbackMethod ( $url ), new Net\URL\Pagination\Template\Standard () );
+echo $_->vars ['list']->OutputLinks ( new Utility\Net\URL\Pagination\CallbackMethod ( $url ), new Utility\Net\URL\Pagination\Template\Standard () );
 echo '</div><div class="clear"></div>';
 ?>

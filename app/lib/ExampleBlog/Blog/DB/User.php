@@ -2,8 +2,7 @@
 namespace Blog\DB;
 
 use Web\Session\User\IUserAdmin;
-
-use Database\Model\Table;
+use Model\Database\Model\Table;
 
 /**
  * User model
@@ -20,14 +19,14 @@ class User extends Table implements IUserAdmin {
 	/**
 	 * The users password
 	 * 
-	 * @var \Database\DynamicTypes\Password Raw
+	 * @var \Model\Database\DynamicTypes\Password Raw
 	 */
 	protected $password;
 	
 	/**
 	 * Is the user an admin?
 	 * 
-	 * @var \Database\DynamicTypes\Boolean yes no
+	 * @var \Model\Database\DynamicTypes\Boolean yes no
 	 */
 	protected $admin;
 	

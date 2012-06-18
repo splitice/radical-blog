@@ -1,7 +1,7 @@
 <?php
 namespace Blog;
 use Blog\DB\Post;
-use HTML\Form\Builder\EventFormInstance;
+use Web\Form\Builder\EventFormInstance;
 
 class CommentForm extends EventFormInstance {
 	function __construct(Post $post,$event){
