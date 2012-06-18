@@ -1,16 +1,16 @@
 <?php
-namespace Web\Pages;
+namespace Web\Page\Controller;
+
+use Web\Page\Handler\EventPageBase;
 use Blog\DB\Comment;
-
 use Web\Templates\ContainerTemplate;
-
 use Database\Model\TableReference;
 use Web\Template;
 use Web\PageHandler;
 use Blog\DB;
 use Exception;
 
-class Post extends PageHandler\EventPageBase {
+class Post extends EventPageBase {
 	protected $post;
 	function __construct($data = array()){
 		if(isset($data['post'])){
@@ -33,5 +33,8 @@ class Post extends PageHandler\EventPageBase {
 		$VARS['post'] = $this->post;
 		$VARS['comment_form'] = $this->post->getCommentFormBuilder(array($this,'eventPostComment'));
 		return new ContainerTemplate('post',$VARS);
+	}
+	function POST(){
+		return $this->GET();
 	}
 }

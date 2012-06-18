@@ -1,12 +1,17 @@
 <?php
-namespace Web\Pages;
-use Basic\DateTime\Date;
+namespace Web\Page\Controller;
 
-use Database\SQL\SelectStatement;
-use Database\SQL\Parts\Where;
-use Database\Search\Adapter\MysqlFulltextTable;
+use Model\Database\Model\Pagination\Paginator;
+
+use Model\Database\Model\Pagination\AlphaPaginator;
+
+use Web\Page\Handler\HTMLPageBase;
+use Basic\DateTime\Date;
+use Model\Database\SQL\SelectStatement;
+use Model\Database\SQL\Parts\Where;
+use Model\Database\Search\Adapter\MysqlFulltextTable;
 use Web\Templates\ContainerTemplate;
-use Database\Model\TableReference;
+use Model\Database\Model\TableReference;
 use Web\Template;
 use Web\PageHandler;
 use Blog\DB;
@@ -18,7 +23,7 @@ use Blog\DB;
  * @author SplitIce
  *
  */
-class TagList extends PageHandler\HTMLPageBase {
+class TagList extends HTMLPageBase {
 	protected $letter;
 	protected $page = 1;
 	
@@ -50,11 +55,11 @@ class TagList extends PageHandler\HTMLPageBase {
 		
 		$source = $table->getAll();
 		
-		$alphaPagination = new \Database\Model\Pagination\AlphaPaginator($source,'tag_name',$this->letter);
+		$alphaPagination = new AlphaPaginator($source,'tag_name',$this->letter);
 		die(var_dump($alphaPagination));
 		$VARS = array();
 		$VARS['header'] = $this->header();
-		$VARS['list'] = new \Database\Model\Pagination\Paginator($source);
+		$VARS['list'] = new Paginator($source);
 		return new ContainerTemplate('index',$VARS);
 	}
 }

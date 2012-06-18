@@ -1,7 +1,7 @@
 <?php
 namespace Blog\DB;
 
-use Database\Model\Table;
+use Model\Database\Model\Table;
 
 /**
  * Tag model
