@@ -18,7 +18,7 @@ class Category extends Table {
 	protected $stub;
 	
 	function toURL(){
-		return '/category/'.$this->stub;
+		return 'category/'.$this->stub;
 	}
 	
 	function __toString(){

@@ -71,7 +71,7 @@ class Post extends Table {
 	
 	/* Optional: The URL to the models main page */
 	function toURL(){
-		return '/p/'.$this->stub;
+		return 'p/'.$this->stub;
 	}
 	
 	/* Optional: A form directly related to the model */

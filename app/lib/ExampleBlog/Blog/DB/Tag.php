@@ -18,7 +18,7 @@ class Tag extends Table {
 	protected $stub;
 	
 	function toURL(){
-		return '/tag/'.$this->stub;
+		return 'tag/'.$this->stub;
 	}
 	
 	function __toString(){
