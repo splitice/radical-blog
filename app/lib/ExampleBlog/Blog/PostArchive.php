@@ -17,7 +17,7 @@ class PostArchive implements IToURL {
 		return $this->date->toFormat('F Y');
 	}
 	function toURL(){
-		return '/archive/'.$this->date->getMonth().'/'.$this->date->getYear().'/';
+		return 'archive/'.$this->date->getMonth().'/'.$this->date->getYear().'/';
 	}
 	function Filter(Where $where){
 		$between = new Between($this->date, $this->date->add('1 month'));
