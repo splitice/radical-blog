@@ -8,7 +8,7 @@ use Blog\DB\Tag;
 use Web\Widget;
 
 class TagBox extends Widget {
-	function Render(){
+	function render(){
 		$sql = \DB::select('post_tag',array('tag_id','cnt'=>'COUNT(tag_id)'))
 					->group_by('tag_id')
 					->order_by('cnt DESC')
